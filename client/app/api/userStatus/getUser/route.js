@@ -37,6 +37,9 @@ export async function POST() {
             console.log("MongoDB connection closed");
         }
     }catch (error) {
-        return error;
+        return NextResponse.json(
+            { message: "Failed to fetch user", error: error.message },
+            { status: 500 }
+        );
     }
 }
