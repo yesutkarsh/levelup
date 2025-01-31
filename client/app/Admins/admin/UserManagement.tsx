@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Search, Users, X, CheckCircle2, Ban, Shield, UserPlus, Sun, Moon } from 'lucide-react';
+import { Search, Users, X, Ban, Shield, UserPlus, Sun, Moon } from 'lucide-react';
 
 export default function UserManagement() {
   const [users, setUsers] = useState([]);
@@ -81,10 +81,11 @@ export default function UserManagement() {
       }
     } catch (error) {
       setFeedbackMessage('An error occurred while approving the user');
+      return error;
     }
   };
 
-  const handleBlock = async (email) => {
+  const handleBlock = async (email: string) => {
     try {
       const response = await fetch('/api/userStatus/approve', {
         method: 'POST',
@@ -102,6 +103,7 @@ export default function UserManagement() {
       }
     } catch (error) {
       setFeedbackMessage('An error occurred while blocking the user');
+      return error;
     }
   };
 
@@ -129,6 +131,7 @@ export default function UserManagement() {
       }
     } catch (error) {
       setFeedbackMessage('An error occurred while updating permissions');
+      return error;
     }
   };
 
