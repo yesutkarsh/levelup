@@ -14,7 +14,7 @@ export async function POST() {
         }
 
 
-        const uri = "mongodb://127.0.0.1:27017";
+        const uri = process.env.MONGODB_URI;
         const client = new MongoClient(uri);
         
         try {
@@ -24,8 +24,6 @@ export async function POST() {
             const database = client.db("LEVEL_UP");
             const collection = database.collection("all_users");
             const result = await collection.findOne({ email: emailHeader });
-            console.log("Result:", result);
-    
             return NextResponse.json(result);
     
         } catch (dbError) {
