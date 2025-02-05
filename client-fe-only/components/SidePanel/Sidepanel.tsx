@@ -54,17 +54,16 @@ export default function Sidepanel({
             <span>{weekTrends}</span>
           </div>
         </div>
-
-        
       </div>
-
 
       {/* Notifications */}
       {notifications.map((notification) => (
-        <div key={notification.id}>
+        <div key={notification.id} className={styles.notification}>
           <h1>{notification.title}</h1>
           <p>{notification.description}</p>
-          <a href={notification.link}>Read More</a>
+          <a href={notification.link}>
+            Read More <i className="ri-arrow-right-line"></i>
+          </a>
         </div>
       ))}
     </div>

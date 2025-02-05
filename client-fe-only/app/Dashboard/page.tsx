@@ -6,8 +6,8 @@ import { Notification } from '@/components/SidePanel/Sidepanel'
 const dummyNotifications:Notification[] = [
   {
     id:1,
-    title:"Title",
-    description:"Description",
+    title:"Industry Expose Sessions with Deepinder Goyal",
+    description:"CEO ZOMATO",
     date:"Date",
     link:"Link"
   },

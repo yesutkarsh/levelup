@@ -41,3 +41,48 @@
     font-size: 38px;
     width: 50px;
 }
+
+
+/* Add these styles to your existing CSS */
+.notification {
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    padding: 15px;
+    margin: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.notification:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.notification h1 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+.notification p {
+    font-size: 14px;
+    color: #b0b0b0;
+    margin-bottom: 12px;
+}
+
+.notification a {
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.notification a:hover {
+    text-decoration: underline;
+}
+
+.notification a i {
+    font-size: 12px;
+}
