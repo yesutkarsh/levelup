@@ -1,0 +1,43 @@
+.sidepanel{
+    background-color: #181914;
+    width: 300px;
+    height: calc(100vh - 20px);
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+    border-radius: 22px;
+    padding: 10px;
+    color: white;
+}
+
+.sidepanelheadernumbers{
+    color: black;
+    display: grid;
+    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 10px;
+}
+
+.sidepanelheadernumbers div{
+    width: 90%;
+    min-width: 0px;
+    padding: 10px;
+    height: 100px;
+    border-radius: 18px;
+    background-color: #353831;
+    margin: 5px;
+    color: white;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sidepanelheadernumbers div h1{
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+.sidepanelheadernumbers div span{
+    font-size: 38px;
+    width: 50px;
+}

@@ -30,7 +30,7 @@ export default function UserManagement() {
   useEffect(() => {
     if (searchQuery.trim()) {
       const filtered = users.filter(user => 
-        user.email.toLowerCase().includes(searchQuery.toLowerCase())
+        user?.email?.toLowerCase().includes(searchQuery.toLowerCase())
       );
       setFilteredUsers(filtered);
     } else {
@@ -85,7 +85,7 @@ export default function UserManagement() {
     }
   };
 
-  const handleBlock = async (email: string) => {
+  const handleBlock = async (email) => {
     try {
       const response = await fetch('/api/userStatus/approve', {
         method: 'POST',
@@ -117,7 +117,7 @@ export default function UserManagement() {
         body: JSON.stringify({
           email,
           status: 'approved',
-          category: viewPermissionsUser.category,
+          category: viewPermissionsUser.category ,
           customPermissions,
         }),
       });
